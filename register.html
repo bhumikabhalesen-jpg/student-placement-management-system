@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Registration | SPMS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fc;
+            color: #243653;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background: #173b70;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 12px #00000020;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a9d5ff;
+        }
+
+        main {
+            flex: 1;
+            padding: 38px 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 540px;
+            margin: 0 auto;
+            padding: 32px;
+            background: white;
+            border: 1px solid #e1e8f2;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px #173b7015;
+        }
+
+        .register-icon {
+            width: 62px;
+            height: 62px;
+            margin: 0 auto 18px;
+            background: #e7efff;
+            color: #24559a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+        }
+
+        h1 {
+            color: #173b70;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #69778c;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            margin-top: 17px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #344866;
+        }
+
+        input, select {
+            display: block;
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            background: white;
+            color: #243653;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #24559a;
+            box-shadow: 0 0 0 3px #24559a18;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 26px;
+            padding: 14px;
+            background: #24559a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #173b70;
+        }
+
+        .login-text {
+            text-align: center;
+            margin-top: 22px;
+            color: #59677b;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .login-text a {
+            color: #24559a;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 18px 12px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav .links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .container {
+                padding: 24px 19px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">SPMS</div>
+
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/my-applications">My Applications</a>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+
+        <div class="register-icon">👤</div>
+
+        <h1>Student Registration</h1>
+
+        <p class="subtitle">
+            Create your account and begin your career journey.
+        </p>
+
+        <form action="/register" method="POST">
+
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required
+            >
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required
+            >
+
+            <label for="password">Create Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                minlength="8"
+                autocomplete="new-password"
+                placeholder="Minimum 8 characters"
+                required
+            >
+
+            <label for="mobile">Mobile Number</label>
+            <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                minlength="10"
+                inputmode="numeric"
+                placeholder="10 digit mobile number"
+                required
+            >
+
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Mechanical">Mechanical</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Commerce">Commerce</option>
+            </select>
+
+            <label for="qualification">Qualification</label>
+            <input
+                type="text"
+                id="qualification"
+                name="qualification"
+                placeholder="Enter your qualification"
+                required
+            >
+
+            <button type="submit">Create Account</button>
+
+        </form>
+
+        <p class="login-text">
+            Already registered?
+            <a href="/login">Login here</a>
+        </p>
+
+    </div>
+</main>
+
+<footer>
+    Student Placement Management System | College Project
+</footer>
+
+</body>
+</html>

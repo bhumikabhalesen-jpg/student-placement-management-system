@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Student Placement Management System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #263449;
+        }
+
+        header {
+            background: linear-gradient(135deg, #173b70, #24559a);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        header p {
+            margin: 12px 0 0;
+            font-size: 17px;
+        }
+
+        nav {
+            background: white;
+            padding: 15px 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px #0000000d;
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 5px 12px;
+            color: #173b70;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #3878ce;
+        }
+
+        .hero {
+            max-width: 850px;
+            margin: 40px auto 25px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #173b70;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #627187;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .cards {
+            max-width: 900px;
+            margin: 25px auto 50px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 20px;
+            border-radius: 14px;
+            text-align: center;
+            box-shadow: 0 5px 20px #173b7010;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card .icon {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #173b70;
+            margin: 8px 0;
+        }
+
+        .card p {
+            color: #718096;
+            font-size: 14px;
+            line-height: 1.6;
+            min-height: 44px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #24559a;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #173b70;
+        }
+
+        footer {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 550px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Placement Management System</h1>
+        <p>Your Career, Our Priority</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Registration</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/my-applications">My Applications</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Welcome to Your Career Portal!</h2>
+
+        <p>
+            Start your career journey with us.
+            Register as a student, explore job opportunities,
+            apply for suitable positions and track your applications
+            in one place.
+        </p>
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">🔐</div>
+            <h3>Student Login</h3>
+            <p>Login to access your student account.</p>
+            <a class="btn" href="/login">Login Now</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎓</div>
+            <h3>Student Registration</h3>
+            <p>Create your account to explore career opportunities.</p>
+            <a class="btn" href="/register">Register Now</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💼</div>
+            <h3>Explore Jobs</h3>
+            <p>Discover available jobs and apply for suitable positions.</p>
+            <a class="btn" href="/jobs">View Jobs</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">📋</div>
+            <h3>My Applications</h3>
+            <p>Check the status of your submitted applications.</p>
+            <a class="btn" href="/my-applications">View Applications</a>
+        </div>
+
+    </section>
+
+    <footer>
+        Student Placement Management System | College Project
+    </footer>
+
+</body>
+</html>

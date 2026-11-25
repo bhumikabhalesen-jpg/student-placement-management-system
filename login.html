@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Login | SPMS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fc;
+            color: #243653;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background: #173b70;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 12px #00000020;
+        }
+
+        .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #a9d5ff;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px #173b7015;
+            border: 1px solid #e1e8f2;
+        }
+
+        .login-icon {
+            width: 65px;
+            height: 65px;
+            background: #e7efff;
+            color: #24559a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            margin: 0 auto 18px;
+        }
+
+        h1 {
+            color: #173b70;
+            text-align: center;
+            font-size: 29px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #69778c;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #344866;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #cbd5e1;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+            background: #fff;
+        }
+
+        input:focus {
+            border-color: #24559a;
+            box-shadow: 0 0 0 3px #24559a18;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background: #24559a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #173b70;
+        }
+
+        .register-text {
+            text-align: center;
+            color: #59677b;
+            margin-top: 22px;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .register-text a {
+            color: #24559a;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 18px 12px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav .links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            .container {
+                padding: 25px 20px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">SPMS</div>
+
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/register">Registration</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/my-applications">My Applications</a>
+    </div>
+</nav>
+
+<main>
+    <div class="container">
+
+        <div class="login-icon">👤</div>
+
+        <h1>Student Login</h1>
+
+        <p class="subtitle">
+            Welcome to Student Placement Management System
+        </p>
+
+        <form action="/login" method="POST">
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your registered email"
+                autocomplete="email"
+                required
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button type="submit">Login</button>
+
+        </form>
+
+        <p class="register-text">
+            Don't have an account?
+            <a href="/register">Register here</a>
+        </p>
+
+    </div>
+</main>
+
+<footer>
+    Student Placement Management System | College Project
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Available Jobs | SPMS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f6fc;
+            color: #243653;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            background: #173b70;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            box-shadow: 0 3px 12px #00000020;
+        }
+
+        .logo {
+            color: white;
+            font-size: 21px;
+            font-weight: bold;
+        }
+
+        nav .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #a9d5ff;
+        }
+
+        header {
+            text-align: center;
+            padding: 55px 20px 35px;
+            background: linear-gradient(135deg, #e2edff, #f8faff);
+        }
+
+        header h1 {
+            color: #173b70;
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            color: #596b85;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .jobs {
+            width: 100%;
+            max-width: 1150px;
+            margin: 0 auto;
+            padding: 35px 20px 50px;
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(260px, 1fr)
+            );
+            gap: 25px;
+            flex: 1;
+        }
+
+        .job-card {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 15px;
+            border: 1px solid #e1e8f2;
+            box-shadow: 0 5px 18px #173b7010;
+            transition: transform 0.25s, box-shadow 0.25s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .job-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px #173b7020;
+        }
+
+        .job-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 12px;
+            background: #e7efff;
+            color: #24559a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .job-card h2 {
+            color: #173b70;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .company {
+            color: #24559a !important;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .job-card p {
+            color: #56657a;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 9px;
+        }
+
+        .apply-btn {
+            display: block;
+            background: #24559a;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            padding: 13px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: auto;
+            transition: background 0.2s;
+        }
+
+        .job-card .apply-btn {
+            margin-top: 20px;
+        }
+
+        .apply-btn:hover {
+            background: #102d58;
+        }
+
+        footer {
+            background: #173b70;
+            color: white;
+            text-align: center;
+            padding: 20px 12px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav .links {
+                justify-content: center;
+                gap: 14px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            .jobs {
+                padding: 25px 16px 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">SPMS</div>
+
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Registration</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/my-applications">My Applications</a>
+    </div>
+</nav>
+
+<header>
+    <h1>Available Jobs</h1>
+    <p>Explore career opportunities and take the next step towards your future.</p>
+</header>
+
+<main class="jobs">
+
+    <div class="job-card">
+        <div class="job-icon">💻</div>
+        <h2>Software Developer</h2>
+        <p class="company">ABC Technologies</p>
+        <p><strong>Location:</strong> Pune</p>
+        <p><strong>Qualification:</strong> Computer Science / IT</p>
+        <p><strong>Skills:</strong> Python, Java, SQL</p>
+        <a class="apply-btn" href="/apply/Software%20Developer">
+            Apply Now →
+        </a>
+    </div>
+
+    <div class="job-card">
+        <div class="job-icon">🌐</div>
+        <h2>Web Developer</h2>
+        <p class="company">Web Solutions</p>
+        <p><strong>Location:</strong> Mumbai</p>
+        <p><strong>Qualification:</strong> Any relevant degree</p>
+        <p><strong>Skills:</strong> HTML, CSS, JavaScript</p>
+        <a class="apply-btn" href="/apply/Web%20Developer">
+            Apply Now →
+        </a>
+    </div>
+
+    <div class="job-card">
+        <div class="job-icon">🐍</div>
+        <h2>Python Developer</h2>
+        <p class="company">Tech Solutions</p>
+        <p><strong>Location:</strong> Pune</p>
+        <p><strong>Qualification:</strong> Computer Science / IT</p>
+        <p><strong>Skills:</strong> Python, Flask, MySQL</p>
+        <a class="apply-btn" href="/apply/Python%20Developer">
+            Apply Now →
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    Student Placement Management System | College Project
+</footer>
+
+</body>
+</html>

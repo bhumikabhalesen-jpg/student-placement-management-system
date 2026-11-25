@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Applications | SPMS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            color: #263449;
+        }
+
+        header {
+            background: linear-gradient(135deg, #173b70, #24559a);
+            color: white;
+            text-align: center;
+            padding: 22px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 27px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 14px;
+        }
+
+        nav {
+            background: white;
+            padding: 14px 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px #0000000d;
+        }
+
+        nav a {
+            display: inline-block;
+            color: #173b70;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 5px 10px;
+        }
+
+        nav a:hover {
+            color: #3878ce;
+        }
+
+        .container {
+            max-width: 950px;
+            width: calc(100% - 30px);
+            margin: 35px auto;
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px #173b7014;
+        }
+
+        h2 {
+            text-align: center;
+            color: #173b70;
+            margin-top: 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .form-box {
+            max-width: 500px;
+            margin: 0 auto 25px;
+            background: #f5f8ff;
+            border: 1px solid #e0e9fb;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #ccd5e2;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #24559a;
+            box-shadow: 0 0 0 3px #24559a18;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background: #24559a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #173b70;
+        }
+
+        .message {
+            padding: 12px;
+            margin: 18px 0;
+            background: #eef5ff;
+            color: #173b70;
+            border-radius: 8px;
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
+        .table-heading {
+            color: #173b70;
+            margin-top: 28px;
+        }
+
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            border-radius: 10px;
+            border: 1px solid #e0e6ef;
+        }
+
+        table {
+            width: 100%;
+            min-width: 600px;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 14px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e5eaf1;
+        }
+
+        th {
+            background: #24559a;
+            color: white;
+            font-size: 14px;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        tbody tr:hover {
+            background: #f5f8ff;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 6px 10px;
+            background: #e2f6e9;
+            color: #187440;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .links a {
+            display: inline-block;
+            margin: 6px 10px;
+            color: #24559a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 21px;
+            }
+
+            .container {
+                padding: 18px;
+                margin: 22px auto;
+            }
+
+            .form-box {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Placement Management System</h1>
+        <p>Your Career, Our Priority</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Registration</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/my-applications">My Applications</a>
+    </nav>
+
+    <div class="container">
+
+        <h2>My Job Applications</h2>
+        <p class="subtitle">
+            Track your job applications and their current status.
+        </p>
+
+        <div class="form-box">
+            <form method="POST">
+                <label for="email">Registered Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Enter your registered email"
+                >
+
+                <button type="submit">View Applications</button>
+            </form>
+        </div>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        {% if applications %}
+            <h3 class="table-heading">Your Applications</h3>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Job Title</th>
+                            <th>Company</th>
+                            <th>Applied Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for app in applications %}
+                        <tr>
+                            <td>{{ app.job_title }}</td>
+                            <td>{{ app.company_name }}</td>
+                            <td>{{ app.applied_at }}</td>
+                            <td>
+                                <span class="status">
+                                    {{ app.status }}
+                                </span>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% endif %}
+
+        <div class="links">
+            <a href="/jobs">← Back to Jobs</a>
+            <a href="/">Home</a>
+        </div>
+
+    </div>
+
+    <footer>
+        © College Project | Student Placement Management System
+    </footer>
+
+</body>
+</html>

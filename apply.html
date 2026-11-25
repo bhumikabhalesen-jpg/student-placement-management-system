@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Job | SPMS</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            margin: 0;
+            color: #263449;
+        }
+
+        header {
+            background: linear-gradient(135deg, #173b70, #24559a);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 27px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 14px;
+        }
+
+        nav {
+            background: #fff;
+            padding: 14px 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px #0000000d;
+        }
+
+        nav a {
+            color: #173b70;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #3878ce;
+        }
+
+        .container {
+            max-width: 480px;
+            width: calc(100% - 30px);
+            margin: 35px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px #173b7014;
+        }
+
+        .icon {
+            width: 65px;
+            height: 65px;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+            background: #e7efff;
+            color: #24559a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        h2 {
+            color: #173b70;
+            text-align: center;
+            margin: 8px 0;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .job-details {
+            background: #f5f8ff;
+            border: 1px solid #e0e9fb;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 22px;
+            overflow-wrap: anywhere;
+        }
+
+        .job-details p {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+
+        .job-details strong {
+            color: #173b70;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 14px;
+            color: #263449;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            margin-top: 8px;
+            border: 1px solid #ccd5e2;
+            border-radius: 8px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #24559a;
+            box-shadow: 0 0 0 3px #24559a18;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 23px;
+            padding: 14px;
+            background: #24559a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background: #173b70;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 18px;
+            padding: 12px;
+            background: #eef5ff;
+            border-radius: 8px;
+            overflow-wrap: anywhere;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 22px;
+            line-height: 2;
+        }
+
+        .links a {
+            color: #24559a;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 8px;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #718096;
+            font-size: 13px;
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 22px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px;
+            }
+
+            .container {
+                padding: 22px;
+                margin: 25px auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Placement Management System</h1>
+        <p>Your Career, Our Priority</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+        <a href="/register">Registration</a>
+        <a href="/jobs">Jobs</a>
+        <a href="/my-applications">My Applications</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="icon">💼</div>
+
+        <h2>Apply for Job</h2>
+        <p class="subtitle">
+            Take the next step towards your career!
+        </p>
+
+        <div class="job-details">
+            <p><strong>Job Title:</strong> {{ job_title }}</p>
+            <p><strong>Company:</strong> {{ company_name }}</p>
+        </div>
+
+        <form method="POST">
+            <label for="email">Registered Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your registered email"
+            >
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        <div class="links">
+            <a href="/jobs">← Back to Jobs</a>
+            <a href="/">Home</a>
+        </div>
+
+    </div>
+
+    <footer>
+        © College Project | Student Placement Management System
+    </footer>
+
+</body>
+</html>
